@@ -12,11 +12,16 @@
     <div class="container content row">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <div class="page_title row">
-        	<h1><?php the_title(); ?></h1>
+          
+            <h1><?php the_title(); ?></h1>
+          
         </div>
         
         <div class="row">
+
         	<div class="single_side page_side">
+            <h2 class="menu_trigger">See More <i class="fa fa-fw fa-caret-down"></i></h2>
+            <div class="single_menu">
             	<h3>Recent News</h3>
             	<ul>
                 	<?php $args = array(
@@ -64,8 +69,10 @@
                          <?php } ?>
                      <?php endwhile; wp_reset_query(); ?>
                 </ul> 
+              </div>
             </div>
-        	<div class="single_content post">
+        	<div class="single_content">
+            <div class="post">
                  <div class="content">
 					 <?php
                           if ( has_post_thumbnail() ) {
@@ -74,6 +81,7 @@
                     ?>
                     <?php the_content(); ?>
                 </div>
+              </div>
             </div>
             
         </div>

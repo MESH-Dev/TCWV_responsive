@@ -13,9 +13,9 @@
 <div class="container content"> 
 	
 	<div class="page_title row">
-        <div class="six columns">
+        
     	   <h1>Enterprise Resources </h1>
-        </div>
+        
     </div>
     <div class="row">
     	<div class="resource_categories six columns" >

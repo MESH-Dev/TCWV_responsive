@@ -14,9 +14,9 @@ Template Name: Get Involved
 <div class="container content"> 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	<div class="page_title row">
-        <div class="six columns">
+       
     	   <h1><?php the_title();?></h1>
-       </div>
+       
     </div>
     
    
@@ -68,7 +68,7 @@ Template Name: Get Involved
         </div>
         <div class="span6 right six columns">
         	<div class="box">
-            	<div class="joinhead"></div>
+            	<div class="joinhead"><div class="shadow"></div></div>
                 <div class="content">
                     <div class="mailform">
                          <form name="ccoptin" action="http://visitor.r20.constantcontact.com/d.jsp" target="_blank" method="post" style="margin-bottom:3;">

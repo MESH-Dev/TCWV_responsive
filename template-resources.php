@@ -14,9 +14,9 @@ get_header();
 <div class="container content"> 
 	
 	<div class="page_title row">
-		<div class="six columns">
+		
     		<h1>Enterprise Resourcesee</h1>
-		</div>
+		
     </div>
 
 	 

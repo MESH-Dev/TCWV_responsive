@@ -18,7 +18,7 @@ Template Name: Sectors Interior
         </div>
  
        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <div class="main_img row">
+        <div class="main_img interior row">
            <?php  if ( has_post_thumbnail() ) {
                         the_post_thumbnail('sector-head');
                     }
@@ -26,11 +26,14 @@ Template Name: Sectors Interior
         </div>
        
         <div class="sector_con row">
-        	<div class="sector_content post">
-            	<h2 class="single_sector_title"><span class="<?php if(is_page(23))echo "yellow"; if(is_page(21))echo "orange";  if(is_page(28))echo "sectorgreen"; if(is_page(25))echo "sectorblue";  ?>"><?php the_title(); ?></span></h2>
-            	<?php the_content(); ?>
+        	<div class="sector_content seven columns">
+        		<div class="post">
+	            	<h2 class="single_sector_title"><span class="<?php if(is_page(23))echo "yellow"; if(is_page(21))echo "orange";  if(is_page(28))echo "sectorgreen"; if(is_page(25))echo "sectorblue";  ?>"><?php the_title(); ?></span></h2>
+	            	<?php the_content(); ?>
+            	</div>
             </div>
-            <div class="sector_side <?php $slug = basename(get_permalink()); echo $slug;?>">
+            <div class="sector_side five columns <?php $slug = basename(get_permalink()); echo $slug;?>">
+            	<div class="content">
             	<h3>Case Studies</h3>
                 <?php echo get_field('case_study'); ?>
                 <?php endwhile; endif; ?>
@@ -180,7 +183,7 @@ Template Name: Sectors Interior
 					}
 					?>
                 
-                
+                </div>
             </div>
         </div>
         

@@ -5,7 +5,7 @@ Template Name: Innovation
  get_header();
 ?>
 
-<div class="page_wrap shaun">
+<div class="page_wrap">
     <div class="container">
         <!--<div class="leftsidebtn"><img src="<?php bloginfo('template_url'); ?>/images/get_involved.png" /></div>
         <div class="rightsidebtn"><img src="<?php bloginfo('template_url'); ?>/images/explore.png" /></div> -->
@@ -14,9 +14,9 @@ Template Name: Innovation
 <div class="container content"> 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	<div class="page_title row">
-      <div class="six columns">
+      
       	 <h1><?php the_title();?></h1>
-      </div>
+      
     </div>
     <div class="span_12 row page_text no-bot-pad">
    		<?php the_content();?>
@@ -26,7 +26,7 @@ Template Name: Innovation
     	 <div class="span6 left six columns"> 
         	<div class="box">
             	<h2><a href="<?php bloginfo('url'); ?>/sectors-landing">Innovation Sectors</a></h2>
-                 <div class="box_content innovbox">
+                 <div class="box_content content innovbox">
                  	
                  	<?php 
 					$args = array(
@@ -61,7 +61,7 @@ Template Name: Innovation
         <!--SUCCESS STORIES-->
         	<div class="box">
             	<h2><a href="<?php bloginfo('url'); ?>/category/success-stories/">Success Stories</a></h2>
-                 <div class="box_content innovbox">
+                 <div class="box_content content innovbox">
                 	
           <?php 
 					$args = array(
@@ -94,7 +94,7 @@ Template Name: Innovation
               <a href="<?php bloginfo('url'); ?>/programs/">Programs</a>
             </h2>
               
-          <div class="box_content innovbox">
+          <div class="box_content content innovbox">
                 	
           <?php 
 					

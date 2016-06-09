@@ -11,9 +11,11 @@
 	}
     
 function loadup_scripts() {
-    
+    wp_enqueue_script( 'sidr-js', get_template_directory_uri().'/js/jquery.sidr.min.js', array('jquery'), '1.0.0', true );
+    wp_enqueue_script( 'theme-js', get_template_directory_uri().'/js/mesh.js', array('jquery'), '1.0.0', true );
     wp_enqueue_script('masonry', '//cdnjs.cloudflare.com/ajax/libs/masonry/4.1.0/masonry.pkgd.min.js', true);
-    
+    wp_enqueue_style('sidr-bare', get_template_directory_uri().'/css/jquery.sidr.bare.css', true);
+    wp_enqueue_style('fontawesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css', true);
 }
 add_action( 'wp_enqueue_scripts', 'loadup_scripts' );
 
@@ -26,7 +28,7 @@ add_action( 'wp_enqueue_scripts', 'loadup_scripts' );
     		'after_widget'  => '</div></div>',
     		'before_title'  => '<h2>',
     		'after_title'   => '</h2>
-                 <div class="box_content modbox">'
+                 <div class="box_content content modbox">'
     	));
 		
 		register_sidebar(array(
@@ -37,7 +39,7 @@ add_action( 'wp_enqueue_scripts', 'loadup_scripts' );
     		'after_widget'  => '</div></div>',
     		'before_title'  => '<h2>',
     		'after_title'   => '</h2>
-                 <div class="box_content modbox">'
+                 <div class="box_content content modbox">'
     	));
 		
 		register_sidebar(array(
@@ -48,7 +50,7 @@ add_action( 'wp_enqueue_scripts', 'loadup_scripts' );
     		'after_widget'  => '</div></div>',
     		'before_title'  => '<h2>',
     		'after_title'   => '</h2>
-                 <div class="box_content modbox">'
+                 <div class="box_content content modbox">'
     	));
 		
 		
@@ -60,7 +62,7 @@ add_action( 'wp_enqueue_scripts', 'loadup_scripts' );
     		'after_widget'  => '</div></div>',
     		'before_title'  => '<h2>',
     		'after_title'   => '</h2>
-                 <div class="box_content modbox">'
+                 <div class="box_content content modbox">'
     	));
 		
 		register_sidebar(array(
@@ -71,7 +73,7 @@ add_action( 'wp_enqueue_scripts', 'loadup_scripts' );
     		'after_widget'  => '</div></div>',
     		'before_title'  => '<h2>',
     		'after_title'   => '</h2>
-                 <div class="box_content modbox">'
+                 <div class="box_content content modbox">'
     	));
 		
 		register_sidebar(array(
@@ -82,7 +84,7 @@ add_action( 'wp_enqueue_scripts', 'loadup_scripts' );
     		'after_widget'  => '</div></div>',
     		'before_title'  => '<h2>',
     		'after_title'   => '</h2>
-                 <div class="box_content modbox">'
+                 <div class="box_content content modbox">'
     	));
 		
 		

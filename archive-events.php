@@ -11,9 +11,9 @@
 <div class="container content">
 
 	<div class="page_title row">
-    <div class="six columns">
+    
     	<h1>Upcoming Events</h1>
-    </div>
+    
   </div>
 
 

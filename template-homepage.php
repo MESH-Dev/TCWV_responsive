@@ -18,7 +18,8 @@ Template Name: Homepage
     </div>
 <div id="slides">
     <div class="container">
-    	<div class="row slidesrow shaun">
+    	<div class="row slidesrow">
+          <div class="eight columns">
             <div class="images">
               <?php 
 
@@ -55,8 +56,8 @@ Template Name: Homepage
               ?>
                <a href="<?php echo $link ?>" target="_self">
                   <div id="<?php echo $id ?>" class="<?php echo $position; ?>" >
-                    <div class="slide-image-content <?php echo $color; ?>">
-               		     <img alt="<?php echo $imageAlt; ?>" src="<?php echo $imageUrl; ?>"/>
+                    <div class="slide-image-content <?php echo $color; ?>" style="background-image:url('<?php echo $imageUrl; ?>')">
+               		     <!-- <img class="slide_img" alt="<?php echo $imageAlt; ?>" src="<?php echo $imageUrl; ?>"/> -->
                        <div class="overlay">
                           <div class="caption">
                             <h2><?php echo $overlay_h2 ?></h2>
@@ -69,7 +70,10 @@ Template Name: Homepage
 
               <?php $ctr++; endwhile; endif; ?>
 
+              </div>
             </div>
+
+            <div class="four columns">
              <div class="texts">
                <?php if (have_rows('sliders') ) :
                     $ctr2 = 0;
@@ -115,17 +119,19 @@ Template Name: Homepage
                     </div>
 
                     <?php $ctr2++; endwhile; endif; ?>
-
+              </div>
                
         	</div>
         </div>
 
         <div class="row">
-        	<div class="slide_nav">
-                <div id="nav1" class="active">01</div>
-                <div id="nav2" >02</div>
-                <div id="nav3">03</div>
-                <div id="nav4">04</div>
+          <div class="twelve columns">
+          	<div class="slide_nav">
+                  <div id="nav1" class="sl_nav active">01</div>
+                  <div id="nav2" class="sl_nav">02</div>
+                  <div id="nav3" class="sl_nav">03</div>
+                  <div id="nav4" class="sl_nav">04</div>
+             </div>
            </div>
        </div>
     </div>
@@ -134,45 +140,57 @@ Template Name: Homepage
 <div class="container content">
     <div id="homesectors" >
                <div class="row">
-                	 <div class="sector three columns">
-                		<a href="<?php echo get_permalink(21); ?>"><img src="<?php bloginfo('template_url'); ?>/images/thumb_chem.jpg" /></a>
-                        <p>
-                        <?php $page_id = 21; $page_data = get_page($page_id);
-  						 echo $page_data->post_excerpt; ?> </p>
+
+                	 <div class="three columns">
+                      <div class="sector">
+                    		<a href="<?php echo get_permalink(21); ?>"><img src="<?php bloginfo('template_url'); ?>/images/thumb_chem.jpg" /></a>
+                            <p>
+                            <?php $page_id = 21; $page_data = get_page($page_id);
+      						 echo $page_data->post_excerpt; ?> </p>
+                      </div>
                      </div>
 
-                	<div class="sector three columns">
-                		<a href="<?php echo get_permalink(23); ?>"><img src="<?php bloginfo('template_url'); ?>/images/thumb_biometrics.jpg" /></a>
-                        <p>
-                        <?php $page_id = 23; $page_data = get_page($page_id);
-  						 echo $page_data->post_excerpt; ?> </p>
+                	<div class="three columns">
+                    <div class="sector">    
+                    		<a href="<?php echo get_permalink(23); ?>"><img src="<?php bloginfo('template_url'); ?>/images/thumb_biometrics.jpg" /></a>
+                            <p>
+                            <?php $page_id = 23; $page_data = get_page($page_id);
+      						 echo $page_data->post_excerpt; ?> </p>
                     </div>
+                  </div>
 
-                	<div class="sector three columns">
-                    	<a href="<?php echo get_permalink(25); ?>"><img src="<?php bloginfo('template_url'); ?>/images/thumb_biotech.jpg" /></a>
-                        <p>
-                        <?php $page_id = 25; $page_data = get_page($page_id);
-  						 echo $page_data->post_excerpt; ?> </p>
+                	<div class="three columns">
+                    <div class="sector">
+                      	<a href="<?php echo get_permalink(25); ?>"><img src="<?php bloginfo('template_url'); ?>/images/thumb_biotech.jpg" /></a>
+                          <p>
+                          <?php $page_id = 25; $page_data = get_page($page_id);
+    						 echo $page_data->post_excerpt; ?> </p>
                     </div>
+                  </div>
 
-                	<div class="sector three columns">
-                    	<a href="<?php echo get_permalink(28); ?>"><img src="<?php bloginfo('template_url'); ?>/images/thumb_energy.jpg" /></a>
-                        <p>
-                        <?php $page_id = 28; $page_data = get_page($page_id);
-  						 echo $page_data->post_excerpt; ?> </p>
+                	<div class="three columns">
+                    <div class="sector">
+                      	<a href="<?php echo get_permalink(28); ?>"><img src="<?php bloginfo('template_url'); ?>/images/thumb_energy.jpg" /></a>
+                          <p>
+                          <?php $page_id = 28; $page_data = get_page($page_id);
+    						 echo $page_data->post_excerpt; ?> </p>
                     </div>
+                </div>
+
+              </div>
          	</div>
 
     </div>
-    <div class="clear"></div>
+    <!-- <div class="clear"></div> -->
 
     <!--HOMEMAIN-->
+    <div class="container">
     <div id="homemain" class="row">
 
       <!--LEFT-->
     	 <div class="span6 six columns left">
         	<div class="box">
-                 <div class="box_content mission">
+                 <div class="box_content content mission">
                  <span class="big_icon"></span>
                  	<div class="missioncon">
                         <h3>The TechConnectWV Mission</h3>
@@ -184,7 +202,7 @@ Template Name: Homepage
             </div>
             <div class="box">
             	<h2><a href="<?php bloginfo('url'); ?>/category/news/">TechConnectWV in the News</a></h2>
-                 <div class="box_content modbox">
+                 <div class="box_content content modbox">
 
           <?php
 					$args = array(
@@ -227,8 +245,8 @@ Template Name: Homepage
         <div class="span6 six columns right">
 
             <div class="box">
-            	<h2><a href="<?php bloginfo('url'); ?>/events/">Event Calendar</a></h2>
-                 <div class="box_content modbox">
+              <h2><a href="<?php bloginfo('url'); ?>/events/">Event Calendar</a></h2>
+                 <div class="box_content content modbox">
 
                  	<?php
 					$args = array(
@@ -270,23 +288,26 @@ Template Name: Homepage
             </div>
 
             <div class="box">
-            	<div class="joinhead_home"></div>
-                 <div class="mailform">
-                 <form name="ccoptin" action="http://visitor.r20.constantcontact.com/d.jsp" target="_blank" method="post" style="margin-bottom:3;">
+              <div class="joinhead_home"><div class="shadow"></div></div>
+              <div class="content">
+              	
+                  <div class="mailform">
+                    <form name="ccoptin" action="http://visitor.r20.constantcontact.com/d.jsp" target="_blank" method="post" style="margin-bottom:3;">
 
-                <input type="text" name="ea" onfocus="if(this.value == 'Enter Email Here...') { this.value = ''; }" value="Enter Email Here..." >
-                <input type="submit" name="go" value="SUBMIT" class="submit">
-                <input type="hidden" name="llr" value="iwyt4vdab">
-                <input type="hidden" name="m" value="1103470650056">
-                <input type="hidden" name="p" value="oi">
-                </form>
-                </div>
+                      <input type="text" name="ea" onfocus="if(this.value == 'Enter Email Here...') { this.value = ''; }" value="Enter Email Here..." >
+                      <input type="submit" name="go" value="SUBMIT" class="submit">
+                      <input type="hidden" name="llr" value="iwyt4vdab">
+                      <input type="hidden" name="m" value="1103470650056">
+                      <input type="hidden" name="p" value="oi">
+                    </form>
+                  </div>
+              </div>
             </div>
 
 
             <div class="box">
             	<h2><a href="<?php bloginfo('url'); ?>/category/blog/">TechConnectWV Blog</a></h2>
-                 <div class="box_content modbox">
+                 <div class="box_content content modbox">
 
                  	<?php
 					$args = array(
@@ -323,8 +344,9 @@ Template Name: Homepage
             </div>
 
              <div class="box">
+
             	<h2><a href="<?php bloginfo('url'); ?>/category/newsletters/">Recent Newsletters</a></h2>
-                 <div class="box_content modbox pr">
+                 <div class="box_content content modbox pr">
 
                  	<?php
 					$args = array(
@@ -356,6 +378,7 @@ Template Name: Homepage
 
 
     <!--END HOMEMAIN-->
+      </div>
     </div>
     <div class="clear"></div>
 </div>

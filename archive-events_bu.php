@@ -16,8 +16,8 @@
     </div>
 
 	 <!--BLOGMAIN-->
-    <div id="blogmain" class="row" style="position: relative; overflow-x: visible; width:1040px; z-index: 10;  overflow-y: hidden; height: 2263px; left:-10px;">
-      
+    <div id="blogmain-events" class="row" ><!-- style="position: relative; overflow-x: visible; width:1040px; z-index: 10;  overflow-y: hidden; height: 2263px; left:-10px;"
+       -->
 
       
       <?php 
@@ -31,9 +31,9 @@
         if($event_date > $todays_date){ ?> 
       
       <!--PAST-->
-		   <div id="past" class="span6 left">
+		   <div id="past" class="span6 left"><!-- span6 left -->
 			  <div class="box">
-				   <div class="box_content blogbox">
+				   <div class="box_content content blogbox">
 					  
 					   <?php
 					  if ( has_post_thumbnail() ) {

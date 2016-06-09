@@ -11,9 +11,9 @@ Template Name: Programs
     <div class="container content row">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <div class="page_title row">
-            <div class="six columns">
+            
         	   <h1><?php the_title(); ?></h1>
-            </div>
+            
         </div>
         <div class="row">
         	<div class="back"><a href="<?php bloginfo('url'); ?>"> Back Home</a></div>

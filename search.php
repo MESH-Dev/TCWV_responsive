@@ -11,23 +11,24 @@
 <div class="container content"> 
 	
 	<div class="page_title row">
-    	<h1> Search Results </h1>
- 
+		
+    		<h1> Search Results </h1>
+ 		
     </div>
  <?php if (have_posts()) : ?>
 	 <div class="searchhead">
         	Results for: "<?php echo get_search_query(); ?>"
         </div>
-    <div id="blogmain" class="row" style="position: relative; overflow-x: visible; width:1040px; z-index: 10;  overflow-y: hidden; height: 2263px; left:-10px;">
+    <div id="blogmain-search" class="row" ><!-- style="position: relative; overflow-x: visible; width:1040px; z-index: 10;  overflow-y: hidden; height: 2263px; left:-10px;" -->
       	
            <?php 
 		   $cnt = 1;
 		   
 		
 		  while ( have_posts() ) : the_post(); ?>
-		   <div class="span6  left">
+		   <div class="card"><!-- span6  left -->
 			  <div class="box">
-				   <div class="box_content blogbox">
+				   <div class="box_content content blogbox">
 					  <div class="date"><?php the_time('F j, Y'); ?></div>
 					   <?php
 					  if ( has_post_thumbnail() ) {

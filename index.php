@@ -11,11 +11,13 @@
 <div class="container content"> 
 	
 	<div class="page_title row">
+		
  			<h1>Blog // Latest News</h1>
+		
     </div>
 
 	 
-    <div id="blogmain" class="row" style="position: relative; overflow-x: visible; width:1040px; z-index: 10;  overflow-y: hidden; height: 2263px; left:-10px;">
+    <div id="blogmain-posts" class="row" ><!-- style="position: relative; overflow-x: visible; width:1040px; z-index: 10;  overflow-y: hidden; height: 2263px; left:-10px;" -->
       
            <?php 
 		  $cnt = 1;
@@ -27,9 +29,9 @@
 		  query_posts( $args );
 		  while ( have_posts() ) : the_post(); ?>
 		  
-		   <div class="span6 left ">
+		   <div class="span6 card ">
 			  <div class="box">
-				   <div class="box_content blogbox">
+				   <div class="box_content content blogbox">
 					  <div class="date"><?php the_time('F j, Y'); ?></div>
 					   <?php
 					  if ( has_post_thumbnail() ) {

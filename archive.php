@@ -8,9 +8,10 @@
         <div class="rightsidebtn"><img src="<?php bloginfo('template_url'); ?>/images/explore.png" /></div>-->
     </div>
  
-<div class="container content"> 
+<div class="container content shaun"> 
 	
 	<div class="page_title row">
+		
     	<?php if (have_posts()) : ?>
 
  			<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
@@ -46,36 +47,36 @@
 				<h1 class="pagetitle">Blog Archives</h1>
 			
 			<?php } ?>
- 
+ 		
     </div>
 
 	 
-    <div id="blogmain" class="row" style="position: relative; overflow-x: visible; width:1040px; z-index: 10;  overflow-y: hidden; height: 2263px; left:-10px;">
+    <div id="blogmain-news" class="row" ><!-- style="position: relative; overflow-x: visible; width:1040px; z-index: 10;  overflow-y: hidden; height: 2263px; left:-10px;" -->
       
            <?php 
 		   $cnt = 1;
 		  while ( have_posts() ) : the_post(); ?>
 		  
-		   <div class="span6  left">
-			  <div class="box">
-				   <div class="box_content blogbox">
-					  <div class="date"><?php the_time('F j, Y'); ?></div>
-					   <?php
-					  if ( has_post_thumbnail() ) {
-						  the_post_thumbnail('mod-thumb');
-					  }
-					  ?>
-					  <h3> <a href="<?php the_permalink();?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
-					  <div class="mod_excerpt"><?php the_excerpt(); ?></div>
-					  
-					  <div class="mod_social">
-						  <a class="facebook" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&t=<?php the_title(); ?>" target="_blank"></a> 
-                        <a class="twitter" href="http://twitter.com/intent/tweet?url=<?php the_permalink();?>&text=<?php the_title(); ?>" target="_blank"></a>
-                        <span class="st_sharethis_custom sharebtn_post" st_url="<?php the_permalink();?>" st_title="<?php the_title(); ?>"></span>
-                        <span class="st_email_custom sharebtn_post" st_url="<?php the_permalink();?>" st_title="<?php the_title(); ?>"></span> 
-					  </div>
-				   </div>     
-			  </div>
+		   <div class="span6 card "><!-- left -->
+		  		<div class="box">
+				   <div class="box_content content blogbox">
+						  <div class="date"><?php the_time('F j, Y'); ?></div>
+						   <?php
+						  if ( has_post_thumbnail() ) {
+							  the_post_thumbnail('mod-thumb');
+						  }
+						  ?>
+						  <h3> <a href="<?php the_permalink();?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+						  <div class="mod_excerpt"><?php the_excerpt(); ?></div>
+						  
+						  <div class="mod_social">
+							  <a class="facebook" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&t=<?php the_title(); ?>" target="_blank"></a> 
+	                        <a class="twitter" href="http://twitter.com/intent/tweet?url=<?php the_permalink();?>&text=<?php the_title(); ?>" target="_blank"></a>
+	                        <span class="st_sharethis_custom sharebtn_post" st_url="<?php the_permalink();?>" st_title="<?php the_title(); ?>"></span>
+	                        <span class="st_email_custom sharebtn_post" st_url="<?php the_permalink();?>" st_title="<?php the_title(); ?>"></span> 
+						  </div>
+					   </div> 
+			   </div> 
 		  </div>
 		 <?php $cnt++; endwhile; endif; wp_reset_query();?> 
 

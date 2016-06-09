@@ -49,7 +49,7 @@
                
                   
                   
-                  <p class="mesh">This site designed by <A href="http://meshfresh.com" target="_blank">MESH</A> <A href="http://meshfresh.com" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/mesh.png" /></A></p>
+                  <p class="mesh">&copy; <?php echo date('Y'); ?> This site designed by <A href="http://meshfresh.com" target="_blank">MESH</A> <A href="http://meshfresh.com" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/mesh.png" /></A></p>
                    
                </div>
                
@@ -84,74 +84,74 @@
     	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/isotope.js"></script>
 		<script>
 			
-			var $container = $('#blogmain');
-			var active = '#all';
+			// var $container = $('#blogmain');
+			// var active = '#all';
            
-          //$container.isotope({
-              //itemSelector : '.span6' 
-            //});
+   //        //$container.isotope({
+   //            //itemSelector : '.span6' 
+   //          //});
             
-            //$("#past_events").isotop({
-             // itemSelector:'.past'
-            //});
+   //          //$("#past_events").isotop({
+   //           // itemSelector:'.past'
+   //          //});
            
             
-			$('#filters a').click(function(){
-							var selector = $(this).attr('data-filter');
-							$container.isotope({ filter: selector,
-											animationEngine : "css" });
- 							var resource = $(this).attr('class');
-							resource = '#' + resource;
-							 $(active).hide();
-							$(resource).show();
-							active = resource;
-							return false;
-						  });
+			// $('#filters a').click(function(){
+			// 				var selector = $(this).attr('data-filter');
+			// 				$container.isotope({ filter: selector,
+			// 								animationEngine : "css" });
+ 		// 					var resource = $(this).attr('class');
+			// 				resource = '#' + resource;
+			// 				 $(active).hide();
+			// 				$(resource).show();
+			// 				active = resource;
+			// 				return false;
+			// 			  });
 
-			//pop outs
-			//$('.home-involved-btn, .resources-home-btn').mouseenter(function() {
-			$('.home-involved-btn').mouseenter(function() {
-				$(this).animate({
-					width: '+=190',marginLeft: '-=190'  
-				}, 200, 'easeOutQuad');
-			 $('.home-involved-btn p').fadeIn('fast');
+			// //pop outs
+			// //$('.home-involved-btn, .resources-home-btn').mouseenter(function() {
+			// $('.home-involved-btn').mouseenter(function() {
+			// 	$(this).animate({
+			// 		width: '+=190',marginLeft: '-=190'  
+			// 	}, 200, 'easeOutQuad');
+			//  $('.home-involved-btn p').fadeIn('fast');
 				
-			});
+			// });
 			
-			//$('.home-involved-btn, .resources-home-btn').mouseleave(function(){
-			$('.home-involved-btn').mouseleave(function(){
-				$(this).animate({
-					width: '-=190',marginLeft: '+=190' 
-				}, 200, 'easeOutQuad');
-				$('.home-involved-btn p').fadeOut('fast');
+			// //$('.home-involved-btn, .resources-home-btn').mouseleave(function(){
+			// $('.home-involved-btn').mouseleave(function(){
+			// 	$(this).animate({
+			// 		width: '-=190',marginLeft: '+=190' 
+			// 	}, 200, 'easeOutQuad');
+			// 	$('.home-involved-btn p').fadeOut('fast');
  
 				
-			});
+			// });
 				
-			//$('.home-resource-btn,.involved-home-btn ').mouseenter(function() {
-			$('.home-resource-btn').mouseenter(function() {
-				$(this).animate({
-					width: '+=190'  
-				}, 200, 'easeOutQuad');
-				$('.home-resource-btn img').animate({
-					paddingLeft: '+=190' 
-				}, 200, 'easeOutQuad');
-				$('.home-resource-btn p').fadeIn('fast');
+			// //$('.home-resource-btn,.involved-home-btn ').mouseenter(function() {
+			// $('.home-resource-btn').mouseenter(function() {
+			// 	$(this).animate({
+			// 		width: '+=190'  
+			// 	}, 200, 'easeOutQuad');
+			// 	$('.home-resource-btn img').animate({
+			// 		paddingLeft: '+=190' 
+			// 	}, 200, 'easeOutQuad');
+			// 	$('.home-resource-btn p').fadeIn('fast');
 				
-			});
+			// });
 			
-			//$('.home-resource-btn, .involved-home-btn ').mouseleave(function(){
-			$('.home-resource-btn').mouseleave(function(){
-				$(this).animate({
-					width: '-=190' 
-				}, 200, 'easeOutQuad');
-				$('.home-resource-btn img').animate({
-					paddingLeft: '-=190' 
-				}, 200, 'easeOutQuad');
-				$('.home-resource-btn p').fadeOut('fast');
+			// //$('.home-resource-btn, .involved-home-btn ').mouseleave(function(){
+			// $('.home-resource-btn').mouseleave(function(){
+			// 	$(this).animate({
+			// 		width: '-=190' 
+			// 	}, 200, 'easeOutQuad');
+			// 	$('.home-resource-btn img').animate({
+			// 		paddingLeft: '-=190' 
+			// 	}, 200, 'easeOutQuad');
+			// 	$('.home-resource-btn p').fadeOut('fast');
 				
 				
-			});
+			// });
 
 			 
 			 <?php 
@@ -207,17 +207,23 @@
 			 */
 			
 			var hei = $('.page_wrap').height() +110;
+			var w_width = $(window).width();
 			<?php if(is_page(30)){ ?>
-			$('.home-involved-btn').css('height',hei);
-			$('.home-resource-btn').css('height',hei);
+
+				//if (w_width>1400){
+					console.log(w_width)
+					$('.home-involved-btn').css('height',hei);
+					$('.home-resource-btn').css('height',hei);
+				//}
 			<?php } ?>
 			<?php if(is_page(42)){ ?>
-		 
-			$('.involved-home-btn').css('height',hei);
-			
+		 		//if (w_width>1400){
+					$('.involved-home-btn').css('height',hei);
+				//}
 			<?php } ?>	
-			 
-			$('.resources-home-btn').css('height',hei);
+			 //if (w_width>1400){
+				$('.resources-home-btn').css('height',hei);
+				//}
 			
 		  
 
