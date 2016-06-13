@@ -2183,6 +2183,12 @@ div.search {
 }
 
 @media only screen and (max-width: 500px) {
+  /* line 1116, sass/_shame.scss */
+  .page_title h1 {
+    width: 98%;
+  }
+}
+@media only screen and (max-width: 500px) {
   /* line 1123, sass/_shame.scss */
   .page_title h1:after, .page_title h1:before {
     display: none;
